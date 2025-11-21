@@ -1,20 +1,20 @@
-import calculator
+from calculator import add, subtract, multiply, divide
 
 def test_add():
-    assert calculator.add(2, 3) == 5
+    assert add(2, 3) == 5
 
 def test_subtract():
-    assert calculator.subtract(5, 2) == 3
+    assert subtract(5, 2) == 3
 
 def test_multiply():
-    assert calculator.multiply(4, 3) == 12
+    assert multiply(4, 3) == 12
 
 def test_divide():
-    assert calculator.divide(10, 2) == 5
+    assert divide(10, 2) == 5
 
 def test_divide_by_zero():
     try:
-        calculator.divide(10, 0)
+        divide(10, 0)
         assert False  # Should not reach here
     except ValueError:
         assert True
