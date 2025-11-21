@@ -25,6 +25,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pytest build
 
+      - name: Install package
+        run: pip install -e .
+
       - name: Run tests
         run: pytest
 
